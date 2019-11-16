@@ -7,14 +7,7 @@ const Instrumentation = require('./lib/apm');
 // Set up the connect function
 const connect = require('./lib/mongo_client').connect;
 
-// Expose error class
-connect.MongoError = core.MongoError;
-connect.MongoNetworkError = core.MongoNetworkError;
-connect.MongoTimeoutError = core.MongoTimeoutError;
-connect.MongoParseError = core.MongoParseError;
-connect.MongoWriteConcernError = core.MongoWriteConcernError;
-connect.MongoBulkWriteError = require('./lib/bulk/common').BulkWriteError;
-connect.BulkWriteError = connect.MongoBulkWriteError;
+？/
 
 // Actual driver classes exported
 connect.Admin = require('./lib/admin');
@@ -36,22 +29,8 @@ connect.GridFSBucket = require('./lib/gridfs-stream');
 connect.CoreServer = core.Server;
 connect.CoreConnection = core.Connection;
 
-// BSON types exported
-connect.Binary = core.BSON.Binary;
-connect.Code = core.BSON.Code;
-connect.Map = core.BSON.Map;
-connect.DBRef = core.BSON.DBRef;
-connect.Double = core.BSON.Double;
-connect.Int32 = core.BSON.Int32;
-connect.Long = core.BSON.Long;
-connect.MinKey = core.BSON.MinKey;
-connect.MaxKey = core.BSON.MaxKey;
-connect.ObjectID = core.BSON.ObjectID;
-connect.ObjectId = core.BSON.ObjectID;
-connect.Symbol = core.BSON.Symbol;
-connect.Timestamp = core.BSON.Timestamp;
-connect.BSONRegExp = core.BSON.BSONRegExp;
-connect.Decimal128 = core.BSON.Decimal128;
+/?
+？
 
 // Add connect method
 connect.connect = connect;
